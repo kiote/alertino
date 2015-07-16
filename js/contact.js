@@ -17,15 +17,11 @@ $(function() {
         },
         messages: {
             name: {
-                required: "Please enter your name",
-                minlength: "Your name must consist of at least 2 characters"
+                required: "Пожалуйста, введите имя, чтобы мы занли как к вам обращаться",
+                minlength: "Имя слишком короткое, нужно хотя бы три символа"
             },
             email: {
-                required: "Please enter your email address"
-            },
-            message: {
-                required: "Please enter your message",
-                minlength: "Your message must consist of at least 2 characters"
+                required: "Пожалуйста, введите почту, чтобы мы знали, куда слать новости"
             }
         },
         submitHandler: function(form) {
@@ -49,7 +45,7 @@ $(function() {
             });
         }
     });
-    
+
     // Signup form
     $('#signup').validate({
         rules: {
@@ -92,19 +88,19 @@ $(function() {
             });
         }
     });
-	
+
 	// Subscription form
    	$('#subscribe').validate({
         rules: {
             subscribe_email: {
                 required: true,
                 email: true
-            } 
+            }
         },
         messages: {
             subscribe_email: {
                 required: "Please enter your email address"
-            } 
+            }
         },
         submitHandler: function(form) {
             $(form).ajaxSubmit({
