@@ -1,0 +1,9 @@
+---
+
+- include: setup_virtualenv.yml
+
+- include: setup_git_repo.yml
+
+- include: set_file_permissions.yml
+
+- include: run_dev_server.yml

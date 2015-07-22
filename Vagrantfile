@@ -21,9 +21,9 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.synced_folder ".", "/webapps/alertino"
 
   # Ansible provisioner.
-  # config.vm.provision "ansible" do |ansible|
-  #   ansible.playbook = "vagrant.yml"
-  #   ansible.host_key_checking = false
-  #   ansible.verbose = "v"
-  # end
+  config.vm.provision "ansible" do |ansible|
+    ansible.playbook = "vagrant.yml"
+    ansible.host_key_checking = false
+    ansible.verbose = "v"
+  end
 end

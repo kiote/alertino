@@ -1,0 +1,24 @@
+---
+
+- name: Create the virtualenv
+  command: virtualenv {{ virtualenv_path }} --no-site-packages
+           creates={{ virtualenv_path }}/bin/activate
+
+- name: Create the application log dir
+  command: mkdir -p {{ application_log_dir }}
+
+- name: Create the application log file
+  command: touch {{ application_log_file }}
+           creates={{ application_log_file }}
+
+- name: Set permission to the application log file
+  file: path={{ application_log_file }}
+        owner={{ user_name }}
+        group={{ user_name }}
+        mode=0664
+        state=file
+
+- name: Create the maintenance page
+  template: src=maintenance_off.html
+            dest={{ virtualenv_path }}/maintenance_off.html
+            mode=0664

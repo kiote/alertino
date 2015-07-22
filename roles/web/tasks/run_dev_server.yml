@@ -1,0 +1,4 @@
+---
+
+  - name: Run Django server
+    raw: cd {{ virtualenv_path }}; source bin/activate; python housing-survey/manage.py runserver 0.0.0.0:8080 &

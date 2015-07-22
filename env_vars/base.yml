@@ -1,0 +1,9 @@
+---
+
+git_repo: https://github.com/kiote/alertino.git
+
+project_name: alertino
+application_name: alertino
+user_name: alertino
+
+utf8: true
