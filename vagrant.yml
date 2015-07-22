@@ -14,5 +14,5 @@
 
   roles:
     - base
-    # - db
+    - redis
     - web

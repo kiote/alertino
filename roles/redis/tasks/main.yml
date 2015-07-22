@@ -1,0 +1,7 @@
+---
+- include: install.yml
+# - include: server.yml
+#   when: not redis_sentinel
+#   tags:
+#     - config
+# - include: local_facts.ymls
